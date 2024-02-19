@@ -2,10 +2,10 @@
 import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react'
 import React, { useState, useEffect } from 'react'
 import { Banner } from './components/Banner'
+import { FaArrowDown } from 'react-icons/fa'
 import fgts from '@/images/produtos/fgts.png'
 import crefaz from '@/images/produtos/crefaz.png'
 import maisvalor from '@/images/produtos/maisvalor.png'
-import { FaArrowDown } from 'react-icons/fa'
 
 export default function Start() {
   const details = [
