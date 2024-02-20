@@ -40,8 +40,9 @@ export default function Assessments() {
           }
         `} m={'0 auto'} overflowY={'scroll'} h={{ base: '600px', md: '350px' }} paddingInline={4} alignItems={'center'} justifyContent={'space-between'} w={{ base: '100%', md: '80%' }} gap={4} flexDir={{ base: 'column', md: 'column' }}>
           <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
-            <CardsAssessments user={'Jordan Esly'} locale={'Santos/SP'} assessments={'Obrigado. A empresa me ajudou muito em uma área que estava meio enrolado que era a área financeira, com a sua ajuda, reformei a minha casa e também comprei um novo veículo. E a autoestima foi lá pra cima.'} />
+            <CardsAssessments user={'Milton Miguel'} locale={"Blumenau/SC"} assessments={'Venho aqui agradecer pelo bom atendimento da consultora, muito educada, prestativa, o atendimento foi impecável. Deus abençoe!'} />
           </Box>
+
           <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
             <CardsAssessments user={'Adriana Pietrobelli'} locale={"Ponta Grossa/PR"} assessments={'Quero deixar meu relato agradecendo imensamente a consultora que me atendeu pela competência, transparência, agilidade e gentileza, qualidades as quais sempre me atende no que necessito. Muito obrigada.'} />
           </Box>
@@ -50,13 +51,13 @@ export default function Assessments() {
           </Box>
 
           <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
-            <CardsAssessments user={'Cristiane Lima Sobreira'} locale={'Santos/SP'} assessments={'Passando para deixar os meus parabéns para o atendimento de vocês, quanta agilidade e compromisso, sem falar no respeito, incrível!'} />
+            <CardsAssessments user={'Cristiane Lima Sobreira'} locale={'São Paulo/SP'} assessments={'Passando para deixar os meus parabéns para o atendimento de vocês, quanta agilidade e compromisso, sem falar no respeito, incrível!'} />
           </Box>
           <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
-            <CardsAssessments user={'Adriana Pietrobelli'} locale={"Ponta Grossa/PR"} assessments={'Quero deixar meu relato agradecendo imensamente a consultora que me atendeu pela competência, transparência, agilidade e gentileza, qualidades as quais sempre me atende no que necessito. Muito obrigada.'} />
+            <CardsAssessments user={'Jordan Esly'} locale={'Santos/SP'} assessments={'Obrigado. A empresa me ajudou muito em uma área que estava meio enrolado que era a área financeira, com a sua ajuda, reformei a minha casa e também comprei um novo veículo. E a autoestima foi lá pra cima.'} />
           </Box>
           <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
-            <CardsAssessments user={'Irismar de Souza'} locale={"Santos/SP"} assessments={'O meu atendimento foi muito bom, o consultor foi muito prestativo e educado. Obrigado.'} />
+            <CardsAssessments user={'Irismar de Souza'} locale={"São Paulo/SP"} assessments={'O meu atendimento foi muito bom, o consultor foi muito prestativo e educado. Obrigado.'} />
           </Box>
         </Flex>
       </Box>
