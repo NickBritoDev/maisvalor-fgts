@@ -123,25 +123,25 @@ export default function Start() {
           sub2={details[currentBanner].sub2}
         />
       </Box>
-      <Box zIndex={9} bg={'white'} mt={-8} display={'flex'} flexDir={'column'} color={'black'} alignItems={'center'} justifyContent={'center'} w={'100%'} p={1} h={'100%'}>
+      <Box zIndex={9} bg={'white'} mt={-10} display={'flex'} flexDir={'column'} color={'black'} alignItems={'center'} justifyContent={'center'} w={'100%'} p={1} h={'100%'}>
         <Heading size={'lg'} textTransform={'uppercase'} m={'0 auto'}>Descubra Muito Mais !!!</Heading>
         <Button
-      colorScheme="whatsapp"
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      gap={2}
-      data-section="assessments"
-      onClick={() => scrollToSection('assessments')}
-      mt={6}
-      textAlign="center"
-      fontWeight="bold"
-      _hover={{ transform: 'translateY(-2px)' }}
-      _active={{ transform: 'translateY(2px)' }}
-    >
-      <Text>Navegar</Text>
-      <FaArrowDown />
-    </Button>
+          colorScheme="whatsapp"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          gap={2}
+          data-section="assessments"
+          onClick={() => scrollToSection('assessments')}
+          mt={6}
+          textAlign="center"
+          fontWeight="bold"
+          _hover={{ transform: 'translateY(-2px)' }}
+          _active={{ transform: 'translateY(2px)' }}
+        >
+          <Text>Navegar</Text>
+          <FaArrowDown />
+        </Button>
       </Box>
 
     </Flex>

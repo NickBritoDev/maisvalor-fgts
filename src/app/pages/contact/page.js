@@ -98,8 +98,8 @@ export default function Contact() {
           />
         </div>
         <Box pos={'absolute'} bottom={'30%'} left={4} zIndex={3} color={'black'}>
-          <Heading>Fale Conosco</Heading>
-          <Text fontSize={20} fontWeight={'bold'}>
+          <Heading size={'lg'} color={'#229544'}>Fale Conosco</Heading>
+          <Text fontSize={18} fontWeight={'bold'}>
             Estamos aqui para ajudar! Entre em contato <br /> e descubra como podemos tornar sua experiência ainda melhor.
             <Divider />
           </Text>

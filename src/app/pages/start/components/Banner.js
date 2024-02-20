@@ -2,6 +2,7 @@
 import { AlertDialog, AlertDialogBody, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, Box, Button, Flex, FormControl, FormLabel, Heading, Input, Text, useDisclosure, useToast } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import Image from 'next/image'
+import Details from './Details';
 
 export function Banner({ img, title, sub1, sub2, func, prod }) {
   const phoneNumber = '+5511965927889';
@@ -83,11 +84,11 @@ export function Banner({ img, title, sub1, sub2, func, prod }) {
         <Heading textTransform={'uppercase'} size={{ base: 'xl', md: 'lg' }}>{title}</Heading>
         <Text zIndex={7} fontSize={20} fontWeight={'bold'} my={4}>{sub1}</Text>
         <Text zIndex={7} fontSize={20} fontWeight={'bold'}>{sub2}</Text>
-        <Flex flexDir={{ base: 'column', md: 'row' }}>
-          <Button w={{ base: '50%', md: '10%' }} zIndex={9} textTransform={'uppercase'} mt={20} onClick={onOpen}>
+        <Flex flexDir={{ base: 'column', md: 'row' }} textTransform={'uppercase'}>
+          <Button w={{ base: '50%', md: '10%' }} zIndex={9} mt={20} onClick={onOpen}>
             Contrate já !
           </Button>
-          <Button display={'none'} w={{ base: '50%', md: '10%' }} zIndex={9} ml={{ base: 0, md: 2 }} mt={{ base: 2, md: 8 }} onClick={func}>Mais Produtos</Button>
+          <Details/>
         </Flex>
       </Box>
 
@@ -100,7 +101,7 @@ export function Banner({ img, title, sub1, sub2, func, prod }) {
         bottom={prod === 'CREFAZ' ?
           { base: '51.5%', md: '96.5%' }
           :
-          { base: '39%', md: '75%' }
+          { base: '39%', md: '74%' }
         }
         w={prod === 'CREFAZ' ?
           { base: '554px', md: '900px' }

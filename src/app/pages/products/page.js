@@ -25,9 +25,9 @@ export default function Products() {
           />
         </div>
         <Box textAlign={'right'} pos={'absolute'} bottom={'20%'} right={4} zIndex={1} color={'black'}>
-          <Heading>Tire Suas Duvidas</Heading>
-          <Text fontSize={22} fontWeight={'bold'}>
-            Com nosso chat automatico você pode facilitar <br /> o processo de aquisição da sua liberdade financeira.
+          <Heading  size={'lg'} color={'#229544'}>Tire Suas Duvidas</Heading>
+          <Text fontSize={18} fontWeight={'bold'}>
+            Restou alguma dúvida sobre antecipação de Saque FGTS? <br></br> Nosso chat automático pode te ajudar, entre em contato:
           </Text>
           <Divider />
         </Box>
