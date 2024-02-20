@@ -124,7 +124,7 @@ export default function Start() {
         />
       </Box>
       <Box zIndex={9} bg={'white'} mt={-10} display={'flex'} flexDir={'column'} color={'black'} alignItems={'center'} justifyContent={'center'} w={'100%'} p={1} h={'100%'}>
-        <Heading size={'lg'} textTransform={'uppercase'} m={'0 auto'}>Descubra Muito Mais !!!</Heading>
+        <Heading size={'lg'} textTransform={'uppercase'} m={'0 auto'}>Descubra Muito Mais </Heading>
         <Button
           colorScheme="whatsapp"
           display="flex"

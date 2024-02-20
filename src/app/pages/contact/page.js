@@ -145,12 +145,12 @@ export default function Contact() {
             <FormControl mb={4}>
               <FormLabel fontWeight={'bold'} mb={-2}>Selecione uma pergunta</FormLabel>
               <Select variant='flushed' placeholder="Qual sua dúvida?" name="duvida" value={formData.duvida} onChange={handleChange}>
-                <option style={{ color: 'black' }} value={'Como funciona ?'}>Como funciona ?</option>
-                <option style={{ color: 'black' }} value={'É seguro ?'}>É seguro ?</option>
-                <option style={{ color: 'black' }} value={'Tenho direito ao FGTS ?'}>Tenho direito ao FGTS ?</option>
-                <option style={{ color: 'black' }} value={'É possivel fazer com nome sujo ?'}>É possivel fazer com nome sujo ?</option>
-                <option style={{ color: 'black' }} value={'Qual o percentual de juros ?'}>Qual o percentual de juros ?</option>
-                <option style={{ color: 'black' }} value={'Consigo adquirir esse produto ?'}>Consigo adquirir esse produto ?</option>
+                <option style={{ color: 'black' }} value={'Como funciona?'}>Como funciona?</option>
+                <option style={{ color: 'black' }} value={'É seguro?'}>É seguro?</option>
+                <option style={{ color: 'black' }} value={'Tenho direito ao FGTS?'}>Tenho direito ao FGTS?</option>
+                <option style={{ color: 'black' }} value={'É possivel fazer com nome sujo?'}>É possivel fazer com nome sujo?</option>
+                <option style={{ color: 'black' }} value={'Qual o percentual de juros?'}>Qual o percentual de juros?</option>
+                <option style={{ color: 'black' }} value={'Consigo adquirir esse produto?'}>Consigo adquirir esse produto?</option>
               </Select>
             </FormControl>
 

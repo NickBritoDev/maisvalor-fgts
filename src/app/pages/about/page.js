@@ -17,7 +17,7 @@ export default function About() {
 
     >
 
-      <Heading mb={-8} fontWeight={'normal'} color={'green'} size={'lg'} textTransform={'uppercase'} >Quem é a Mais Valor ?</Heading>
+      <Heading mb={-8} fontWeight={'normal'} color={'green'} size={'lg'} textTransform={'uppercase'} >Quem é a Mais Valor?</Heading>
       <Box w={{ base: '90%', md: '60%' }} display={'flex'} flexDir={'column'} alignItems={'center'} textAlign={'center'} justifyContent={'center'}>
 
         <Flex mt={4} flexDir={{ base: 'column' }} gap={4} w={'100%'} alignItems={'flex-start'} justifyContent={'flex-start'}>

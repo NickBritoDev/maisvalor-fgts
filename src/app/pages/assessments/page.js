@@ -62,7 +62,7 @@ export default function Assessments() {
       </Box>
 
       <Box textAlign={'center'}  >
-        <Heading color={'green'} mb={{ base: 2, md: 6 }} size={{ base: 'sm', md: 'lg' }}>Empresas Parceiras da Mais Valor</Heading>
+        <Heading color={'green'} mb={{ base: 2, md: 6 }} size={{ base: 'sm', md: 'lg' }}>Bancos parceiros da Mais Valor</Heading>
         <Carousel />
       </Box>
 

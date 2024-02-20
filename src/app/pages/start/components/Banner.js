@@ -86,7 +86,7 @@ export function Banner({ img, title, sub1, sub2, func, prod }) {
         <Text zIndex={7} fontSize={20} fontWeight={'bold'}>{sub2}</Text>
         <Flex flexDir={{ base: 'column', md: 'row' }} textTransform={'uppercase'}>
           <Button w={{ base: '50%', md: '10%' }} zIndex={9} mt={20} onClick={onOpen}>
-            Contrate já !
+            Contrate já!
           </Button>
           <Details/>
         </Flex>
