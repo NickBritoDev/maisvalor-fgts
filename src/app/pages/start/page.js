@@ -143,7 +143,7 @@ export default function Start() {
             }}
           />
         </Box>
-        <Box >
+        <Box display={{base: 'none', md: 'initial'}} >
           <Image
             width={600}
             height={400}
