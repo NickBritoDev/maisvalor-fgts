@@ -7,7 +7,7 @@ export default function Details() {
 
   return (
     <>
-      <Button w={{ base: '50%', md: '10%' }} zIndex={9} ml={{ base: 0, md: 2 }} mt={{ base: 2, md: 20 }} colorScheme='whatsapp' onClick={onOpen}>
+      <Button mb={250} w={{ base: '50%', md: '10%' }} zIndex={9} ml={{ base: 0, md: 2 }} mt={{ base: 2, md: 20 }} colorScheme='whatsapp' onClick={onOpen}>
         Mais Detalhes
       </Button>
 

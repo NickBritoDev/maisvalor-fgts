@@ -6,6 +6,7 @@ import { FaArrowDown } from 'react-icons/fa'
 import fgts from '@/images/produtos/fgts.png'
 import crefaz from '@/images/produtos/crefaz.png'
 import maisvalor from '@/images/produtos/maisvalor.png'
+import Image from 'next/image'
 
 export default function Start() {
   const details = [
@@ -113,7 +114,14 @@ export default function Start() {
       justifyContent={'flex-start'}
       flexDir={'column'}
     >
-      <Box w={'100%'} bg={details[currentBanner].gradient} h={'80vh'}>
+      <Box
+        display={'flex'}
+        flexDir={'column'}
+        w={'100%'}
+        bg={details[currentBanner].gradient}
+        h={'80vh'}
+        position="relative"
+      >
         <Banner
           prod={details[currentBanner].prod}
           func={handleNextBanner}
@@ -122,7 +130,34 @@ export default function Start() {
           sub1={details[currentBanner].sub1}
           sub2={details[currentBanner].sub2}
         />
+        <Box display={{md:'none'}}>
+          <Image
+            width={300}
+            height={400}
+            src={fgts}
+            alt='fgts mais valor'
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              right: 0,
+            }}
+          />
+        </Box>
+        <Box >
+          <Image
+            width={600}
+            height={400}
+            src={fgts}
+            alt='fgts mais valor'
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              right: 0,
+            }}
+          />
+        </Box>
       </Box>
+
       <Box zIndex={9} bg={'white'} mt={-10} display={'flex'} flexDir={'column'} color={'black'} alignItems={'center'} justifyContent={'center'} w={'100%'} p={1} h={'100%'}>
         <Heading size={'lg'} textTransform={'uppercase'} m={'0 auto'}>Descubra Muito Mais </Heading>
         <Button

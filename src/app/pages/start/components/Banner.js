@@ -85,31 +85,13 @@ export function Banner({ img, title, sub1, sub2, func, prod }) {
         <Text zIndex={7} fontSize={20} fontWeight={'bold'} my={4}>{sub1}</Text>
         <Text zIndex={7} fontSize={20} fontWeight={'bold'}>{sub2}</Text>
         <Flex flexDir={{ base: 'column', md: 'row' }} textTransform={'uppercase'}>
-          <Button w={{ base: '50%', md: '10%' }} zIndex={9} mt={20} onClick={onOpen}>
+          <Button w={{ base: '50%', md: '10%' }} zIndex={9} mt={{md:20}} onClick={onOpen}>
             Contrate já!
           </Button>
           <Details/>
         </Flex>
       </Box>
 
-      <Box zIndex={0} position="relative"
-        left={prod === 'CREFAZ' ?
-          { base: '-15%', md: '50%' }
-          :
-          { base: '-2%', md: '50%' }
-        }
-        bottom={prod === 'CREFAZ' ?
-          { base: '51.5%', md: '96.5%' }
-          :
-          { base: '39%', md: '74%' }
-        }
-        w={prod === 'CREFAZ' ?
-          { base: '554px', md: '900px' }
-          :
-          { base: '420px', md: '700px' }
-        }>
-        <Image src={img} alt='fgts mais valor' />
-      </Box>
 
       <AlertDialog
         isOpen={isOpen}
