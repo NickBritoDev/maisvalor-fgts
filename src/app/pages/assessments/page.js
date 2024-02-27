@@ -62,7 +62,7 @@ export default function Assessments() {
         </Flex>
       </Box>
 
-      <Box textAlign={'center'}  >
+      <Box mt={{base:10, md: 2}} textAlign={'center'}  >
         <Heading color={'green'} mb={{ base: 2, md: 6 }} size={{ base: 'sm', md: 'lg' }}>Bancos parceiros da Mais Valor</Heading>
         <Carousel />
       </Box>
