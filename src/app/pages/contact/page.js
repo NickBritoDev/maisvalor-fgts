@@ -100,8 +100,8 @@ export default function Contact() {
           />
         </div>
         <Box pos={'absolute'} bottom={'30%'} left={4} zIndex={3} color={'black'}>
-          <Heading size={'lg'} color={'#229544'}>Fale conosco</Heading>
-          <Text mb={4} fontSize={18} fontWeight={'bold'}>
+          <Heading mt={4} size={'lg'} color={'#229544'}>Fale conosco</Heading>
+          <Text fontSize={18} fontWeight={'bold'}>
             Disponível das 10h às 18h, exceto final de semana e feriados.
             <Divider />
           </Text>
