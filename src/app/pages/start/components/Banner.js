@@ -1,12 +1,11 @@
 'use client'
-import { AlertDialog, AlertDialogBody, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, Box, Button, Flex, FormControl, FormLabel, Heading, Input, Text, useDisclosure, useToast } from '@chakra-ui/react'
+import { AlertDialog, AlertDialogBody, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, Box, Button, Flex, FormControl, FormLabel, Heading, Input, Select, Text, useDisclosure, useToast } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Details from './Details';
+import InputMask from 'react-input-mask';
 
 export function Banner({ img, title, sub1, sub2, func, prod }) {
-  const phoneNumber = '+5511965927889';
-  const message = `Olá vi o anucio sobre ${prod} na pagina de vocês e gostaria de saber mais sobre o produto, metodos de contratação e segurança.`
   const toast = useToast()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const cancelRef = React.useRef()
@@ -16,9 +15,11 @@ export function Banner({ img, title, sub1, sub2, func, prod }) {
     email: '',
     telefone: '',
     produto: prod,
-    duvida: message,
+    duvida: '',
     origem: 'BANNER'
   })
+  const phoneNumber = '+5511965927889';
+  const message = `Olá, meu nome é ${formData.nome}, sou ${formData.produto}. Tenho interesse em sacar meu ${prod}`;
 
   const sendMessage = async (e) => {
     e.preventDefault();
@@ -40,7 +41,7 @@ export function Banner({ img, title, sub1, sub2, func, prod }) {
           email: '',
           telefone: '',
           produto: prod,
-          duvida: message,
+          duvida: '',
           origem: 'BANNER'
         });
 
@@ -85,10 +86,10 @@ export function Banner({ img, title, sub1, sub2, func, prod }) {
         <Text zIndex={7} fontSize={20} fontWeight={'bold'} my={4}>{sub1}</Text>
         <Text zIndex={7} fontSize={20} fontWeight={'bold'}>{sub2}</Text>
         <Flex flexDir={{ base: 'column', md: 'row' }} textTransform={'uppercase'}>
-          <Button w={{ base: '50%', md: '10%' }} zIndex={9} mt={{md:20}} onClick={onOpen}>
+          <Button w={{ base: '50%', md: '10%' }} zIndex={9} mt={{ md: 20 }} onClick={onOpen}>
             Contrate já!
           </Button>
-          <Details/>
+          <Details />
         </Flex>
       </Box>
 
@@ -118,8 +119,48 @@ export function Banner({ img, title, sub1, sub2, func, prod }) {
 
                 <FormControl mb={4}>
                   <FormLabel fontWeight={'bold'} mb={-2}>Telefone</FormLabel>
-                  <Input required variant='flushed' type="tel" color={'black'} _placeholder={{ color: 'black' }} placeholder="Seu telefone celular" name="telefone" value={formData.telefone} onChange={handleChange} />
+                  <InputMask
+                    mask={formData.telefone.length < 10 ? '(99) 9999-9999' : '(99) 99999-9999'}
+                    maskChar=""
+                    value={formData.telefone}
+                    onChange={e => handleChange({ target: { name: 'telefone', value: e.target.value } })}
+                  >
+                    {(inputProps) => (
+                      <Input
+                        variant='flushed'
+                        type="tel"
+                        color={'black'}
+                        _placeholder={{ color: 'black' }}
+                        placeholder="Seu telefone celular"
+                        name="telefone"
+                        {...inputProps}
+                      />
+                    )}
+                  </InputMask>
                 </FormControl>
+
+                <FormControl mb={4}>
+                  <FormLabel fontWeight={'bold'} mb={-2}>Selecione uma profissão</FormLabel>
+                  <Select variant='flushed' placeholder="Escolha uma profissão" name="produto" value={formData.produto} onChange={handleChange}>
+                    <option style={{ color: 'black' }} value={'Servidor público'}>Servidor público</option>
+                    <option style={{ color: 'black' }} value={'Forças Armadas'}>Forças Armadas</option>
+                    <option style={{ color: 'black' }} value={'Funcionário de empresa privada (CLT)'}>Funcionário de empresa privada (CLT)</option>
+                    <option style={{ color: 'black' }} value={'Autônomo'}>Autônomo</option>
+                    <option style={{ color: 'black' }} value={'Aposentado ou pensionista'}>Aposentado ou pensionista</option>
+                  </Select>
+                </FormControl>
+
+                {/* <FormControl mb={4}>
+                  <FormLabel fontWeight={'bold'} mb={-2}>Selecione uma pergunta</FormLabel>
+                  <Select variant='flushed' placeholder="Escolha uma dúvida" name="duvida" value={formData.duvida} onChange={handleChange}>
+                    <option style={{ color: 'black' }} value={'Como funciona?'}>Como funciona?</option>
+                    <option style={{ color: 'black' }} value={'É seguro?'}>É seguro?</option>
+                    <option style={{ color: 'black' }} value={'Tenho direito ao FGTS?'}>Tenho direito ao FGTS?</option>
+                    <option style={{ color: 'black' }} value={'É possivel fazer com nome sujo?'}>É possivel fazer com nome sujo?</option>
+                    <option style={{ color: 'black' }} value={'Qual o percentual de juros?'}>Qual o percentual de juros?</option>
+                    <option style={{ color: 'black' }} value={'Consigo adquirir esse produto?'}>Consigo adquirir esse produto?</option>
+                  </Select>
+                </FormControl> */}
 
                 <Button w={'100%'} type="submit" colorScheme="whatsapp" mt={4}>
                   Enviar

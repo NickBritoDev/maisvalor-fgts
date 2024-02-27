@@ -10,17 +10,15 @@ export default function About() {
       bg={'white'}
       h={'100vh'} w={'100%'}
       overflow={'hidden'} alignItems={'center'}
-      gap={10} justifyContent={'center'}
-      paddingTop={10}
+      gap={10 } justifyContent={'center'}
       display={'flex'}
       flexDir={'column'}
-
     >
 
-      <Heading mb={-8} fontWeight={'normal'} color={'green'} size={'lg'} textTransform={'uppercase'} >Quem é a Mais Valor?</Heading>
+      <Heading mb={-8} color={'green'} size={{ base: 'lg', md: 'lg' }}>Quem é a Mais Valor?</Heading>
       <Box w={{ base: '90%', md: '60%' }} display={'flex'} flexDir={'column'} alignItems={'center'} textAlign={'center'} justifyContent={'center'}>
 
-        <Flex mt={4} flexDir={{ base: 'column' }} gap={4} w={'100%'} alignItems={'flex-start'} justifyContent={'flex-start'}>
+        <Flex mt={10} flexDir={{ base: 'column' }} gap={4} w={'100%'} alignItems={'flex-start'} justifyContent={'flex-start'}>
           <Box p={2} rounded={'xl'} pb={6} w={'100%'} display={'flex'} flexDir={'column'} alignItems={'center'} justifyContent={'flex-start'}>
             <Flex alignItems={'center'} justifyContent={'space-between'} gap={2}>
               <Text fontWeight={'bold'}>VISÃO</Text>
@@ -41,7 +39,7 @@ export default function About() {
           </Box>
         </Flex>
 
-        <Flex flexDir={{ base: 'row', md: 'row' }} mt={{ base: 20, md: 10 }} gap={4} w={'100%'} alignItems={'flex-start'} justifyContent={'flex-start'}>
+        <Flex flexDir={{ base: 'row', md: 'row' }} mt={{ base: 20, md: 20 }} gap={4} w={'100%'} alignItems={'flex-start'} justifyContent={'flex-start'}>
           <Box w={'100%'} boxShadow={'md'} p={2} rounded={'xl'} display={'flex'} flexDir={'column'} alignItems={'center'} justifyContent={'flex-start'}>
             <BsPinMapFill size={30} color='green' />
             <Text>12 escritórios <br></br>

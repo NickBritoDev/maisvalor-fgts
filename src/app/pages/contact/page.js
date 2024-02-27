@@ -4,6 +4,8 @@ import { useState } from 'react';
 import React from 'react'
 import contact from '@/images/draw/contact.png'
 import Image from 'next/image'
+import { FcHome, FcPhone } from 'react-icons/fc';
+import InputMask from 'react-input-mask';
 
 export default function Contact() {
   const toast = useToast();
@@ -98,11 +100,26 @@ export default function Contact() {
           />
         </div>
         <Box pos={'absolute'} bottom={'30%'} left={4} zIndex={3} color={'black'}>
-          <Heading size={'lg'} color={'#229544'}>Fale Conosco</Heading>
-          <Text fontSize={18} fontWeight={'bold'}>
-            Estamos aqui para ajudar! Entre em contato <br /> e descubra como podemos tornar sua experiência ainda melhor.
+          <Heading size={'lg'} color={'#229544'}>Fale conosco</Heading>
+          <Text mb={4} fontSize={18} fontWeight={'bold'}>
+            Disponível das 10h às 18h, exceto final de semana e feriados.
             <Divider />
           </Text>
+          <Flex alignItems={'center'} justifyContent={'flex-start'} gap={2}>
+            <FcHome size={30} />
+            <Text>
+              Rua Quinze de Novembro nº184,
+              13° andar - Centro
+              São Paulo / SP
+            </Text>
+          </Flex>
+          <Flex alignItems={'center'} justifyContent={'flex-start'} gap={2}>
+            <FcPhone size={30} />
+            <Text>
+              Sede (11) 3467-0070 /
+              Sac 0800-042-0710
+            </Text>
+          </Flex>
         </Box>
       </Flex>
 
@@ -124,27 +141,40 @@ export default function Contact() {
 
             <FormControl mb={4}>
               <FormLabel fontWeight={'bold'} mb={-2}>Telefone</FormLabel>
-              <Input variant='flushed' type="tel" color={'black'} _placeholder={{ color: 'black' }} placeholder="Seu telefone celular" name="telefone" value={formData.telefone} onChange={handleChange} />
+              <InputMask
+                mask={formData.telefone.length < 10 ? '(99) 9999-9999' : '(99) 99999-9999'}
+                maskChar=""
+                value={formData.telefone}
+                onChange={e => handleChange({ target: { name: 'telefone', value: e.target.value } })}
+              >
+                {(inputProps) => (
+                  <Input
+                    variant='flushed'
+                    type="tel"
+                    color={'black'}
+                    _placeholder={{ color: 'black' }}
+                    placeholder="Seu telefone celular"
+                    name="telefone"
+                    {...inputProps}
+                  />
+                )}
+              </InputMask>
             </FormControl>
 
             <FormControl mb={4}>
-              <FormLabel fontWeight={'bold'} mb={-2}>Selecione um produto</FormLabel>
-              <Select variant='flushed' placeholder="Escolha um produto" name="produto" value={formData.produto} onChange={handleChange}>
-                <option style={{ color: 'black' }} value={'FGTS'}>FGTS</option>
-                <option style={{ color: 'black' }} value={'Outros Produtos'}>Outros Produtos</option>
-                {/* <option style={{ color: 'black' }} value={'CREFAZ'}>CREFAZ</option>
-                <option style={{ color: 'black' }} value={'Crédito Consignado'}>Crédito Consignado</option>
-                <option style={{ color: 'black' }} value={'Cartão Beneficio'}>Cartão Beneficio</option>
-                <option style={{ color: 'black' }} value={'Credito Imobiliário (CGI e Aquisição)'}>Credito Imobiliário (CGI e Aquisição)</option>
-                <option style={{ color: 'black' }} value={'Crédito Pessoal'}>Crédito Pessoal</option>
-                <option style={{ color: 'black' }} value={'Consórcio'}>Consórcio</option>
-                <option style={{ color: 'black' }} value={'Energia Solar'}>Energia Solar</option> */}
+              <FormLabel fontWeight={'bold'} mb={-2}>Selecione uma profissão</FormLabel>
+              <Select variant='flushed' placeholder="Escolha uma profissão" name="produto" value={formData.produto} onChange={handleChange}>
+                <option style={{ color: 'black' }} value={'Servidor público'}>Servidor público</option>
+                <option style={{ color: 'black' }} value={'Forças Armadas'}>Forças Armadas</option>
+                <option style={{ color: 'black' }} value={'Funcionário de empresa privada (CLT)'}>Funcionário de empresa privada (CLT)</option>
+                <option style={{ color: 'black' }} value={'Autônomo'}>Autônomo</option>
+                <option style={{ color: 'black' }} value={'Aposentado ou pensionista'}>Aposentado ou pensionista</option>
               </Select>
             </FormControl>
 
             <FormControl mb={4}>
               <FormLabel fontWeight={'bold'} mb={-2}>Selecione uma pergunta</FormLabel>
-              <Select variant='flushed' placeholder="Qual sua duvida?" name="duvida" value={formData.duvida} onChange={handleChange}>
+              <Select variant='flushed' placeholder="Escolha uma dúvida" name="duvida" value={formData.duvida} onChange={handleChange}>
                 <option style={{ color: 'black' }} value={'Como funciona?'}>Como funciona?</option>
                 <option style={{ color: 'black' }} value={'É seguro?'}>É seguro?</option>
                 <option style={{ color: 'black' }} value={'Tenho direito ao FGTS?'}>Tenho direito ao FGTS?</option>

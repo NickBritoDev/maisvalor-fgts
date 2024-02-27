@@ -8,7 +8,7 @@ export default function Details() {
   return (
     <>
       <Button mb={250} w={{ base: '50%', md: '10%' }} zIndex={9} ml={{ base: 0, md: 2 }} mt={{ base: 2, md: 20 }} colorScheme='whatsapp' onClick={onOpen}>
-        Mais Detalhes
+        Mais detalhes
       </Button>
 
       <AlertDialog

@@ -89,35 +89,35 @@ export default function Home() {
                   color={'black'}
                 >
                   <Button w={'50vw'} alignItems={'center'} justifyContent={'space-between'} onClick={() => scrollToSection('start')}>
-                    <ListItem mr={10} data-section="start" cursor={'pointer'} >
+                    <ListItem mr={0} data-section="start" cursor={'pointer'} >
                       Início
                     </ListItem>
                     <FcHome />
                   </Button>
 
-                  <Button w={'50vw'} alignItems={'center'} justifyContent={'space-between'} onClick={() => scrollToSection('assessments')}>
-                    <ListItem mr={10} data-section="assessments" cursor={'pointer'} >
-                      Avaliações
-                    </ListItem>
-                    <FcLike />
-                  </Button>
-
                   <Button w={'50vw'} alignItems={'center'} justifyContent={'space-between'} onClick={() => scrollToSection('products')}>
-                    <ListItem mr={10} data-section="products" cursor={'pointer'} >
-                      Produtos
+                    <ListItem mr={0} data-section="products" cursor={'pointer'} >
+                      Dúvidas Frequentes
                     </ListItem>
                     <FcPaid />
                   </Button>
 
+                  <Button w={'50vw'} alignItems={'center'} justifyContent={'space-between'} onClick={() => scrollToSection('assessments')}>
+                    <ListItem mr={0} data-section="assessments" cursor={'pointer'} >
+                      Avaliações
+                    </ListItem>
+                    <FcLike />
+                  </Button>
+            
                   <Button w={'50vw'} alignItems={'center'} justifyContent={'space-between'} onClick={() => scrollToSection('about')}>
-                    <ListItem mr={10} data-section="about" cursor={'pointer'} >
+                    <ListItem mr={0} data-section="about" cursor={'pointer'} >
                       Sobre
                     </ListItem>
                     <FcRules />
                   </Button>
 
                   <Button w={'50vw'} alignItems={'center'} justifyContent={'space-between'} onClick={() => scrollToSection('contact')}>
-                    <ListItem data-sec mr={10} tion="contact" cursor={'pointer'} >
+                    <ListItem data-sec mr={0} tion="contact" cursor={'pointer'} >
                       Fale Conosco
                     </ListItem>
                     <FcOnlineSupport />
@@ -140,11 +140,11 @@ export default function Home() {
           <ListItem data-section="start" cursor={'pointer'} onClick={() => scrollToSection('start')}>
             Início
           </ListItem>
+          <ListItem data-section="products" cursor={'pointer'} onClick={() => scrollToSection('products')}>
+            Dúvidas Frequentes
+          </ListItem>
           <ListItem data-section="assessments" cursor={'pointer'} onClick={() => scrollToSection('assessments')}>
             Avaliações
-          </ListItem>
-          <ListItem data-section="products" cursor={'pointer'} onClick={() => scrollToSection('products')}>
-            Produtos
           </ListItem>
           <ListItem data-section="about" cursor={'pointer'} onClick={() => scrollToSection('about')}>
             Sobre
@@ -193,11 +193,11 @@ export default function Home() {
         <Box id="start" className="scroll-section" h={'100vh'} w={'100%'}>
           <Start />
         </Box>
-        <Box id="assessments" className="scroll-section" h={'100vh'} w={'100%'}>
-          <Assessments />
-        </Box>
         <Box id="products" className="scroll-section" h={'100vh'} w={'100%'}>
           <Products />
+        </Box>
+        <Box id="assessments" className="scroll-section" h={'100vh'} w={'100%'}>
+          <Assessments />
         </Box>
         <Box id="about" className="scroll-section" h={'100vh'} w={'100%'}>
           <About />

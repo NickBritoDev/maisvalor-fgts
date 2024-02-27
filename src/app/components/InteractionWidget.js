@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { ChakraProvider, Box, Button, Text, VStack, Flex, Spinner, Input, Select, useDisclosure, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody } from '@chakra-ui/react';
 import { FaRobot } from "react-icons/fa";
 import { TbMessageCircleQuestion } from "react-icons/tb";
+import InputMask from 'react-input-mask';
 
 const perguntas = [
   {
@@ -31,7 +32,6 @@ const perguntas = [
       // 'Crédito Consignado',
       // 'Cartão Beneficio',
       'FGTS',
-      'Outros Produtos',
       // 'Credito Imobiliário (CGI e Aquisição)',
       // 'Crédito Pessoal',
       // 'Consórcio',
@@ -155,7 +155,8 @@ export default function InteractionWidget() {
   };
 
   const gerarTextoWhatsapp = () => {
-    const textoFormatado = `Olá, meu nome é ${dadosUsuario.nome || 'Não informado'}, sou ${dadosUsuario.profissao || 'Não informado'} e tenho interesse em adquirir ${dadosUsuario.produto || 'Não informado'}. ${dadosUsuario.conhecimento === 'Sim' ? 'Eu já conheço o produto. Mas quero saber mais.' : 'Não conheço, mas gostaria de saber mais sobre o produto.'} Encontrei a Mais Valor atraves de um anuncio, e a paginá de auto contratação me convenceu a dar uma chance!`;
+    const textoFormatado = `Olá, meu nome é ${dadosUsuario.nome || 'Não informado'}, sou ${dadosUsuario.profissao || 'Não informado'}.
+    Tenho interesse em sacar meu ${dadosUsuario.produto || 'Não informado'}.!`;
 
     return encodeURIComponent(textoFormatado);
   };
@@ -234,17 +235,25 @@ export default function InteractionWidget() {
 
                   {perguntas[perguntaAtual].tipo === 'numero' && (
                     <Flex gap={2}>
-                      <Input
-                        variant='flushed'
-                        _placeholder={{ color: "black" }}
-                        type='number'
-                        placeholder={perguntas[perguntaAtual].placeholder}
+                      <InputMask
+                        mask={respostaInput.length <= 10 ? '(99) 9999-9999' : '(99) 99999-9999'}
+                        maskChar=""
                         value={respostaInput}
                         onChange={(e) => {
                           setRespostaInput(e.target.value);
                           setExibirBotaoEnvio(e.target.value.trim() !== '');
                         }}
-                      />
+                      >
+                        {(inputProps) => (
+                          <Input
+                            {...inputProps}
+                            variant='flushed'
+                            _placeholder={{ color: "black" }}
+                            type='tel'
+                            placeholder={perguntas[perguntaAtual].placeholder}
+                          />
+                        )}
+                      </InputMask>
                       {exibirBotaoEnvio && (
                         <Button color={'#fff'} onClick={() => responder(respostaInput)} bg="#229544">
                           Enviar

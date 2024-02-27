@@ -18,7 +18,7 @@ export default function Assessments() {
       <Box w={'100%'}>
         <Flex mt={{ base: -20, md: -6 }} mb={{ base: 0, md: 10 }} flexDir={'column'} mx={'auto'} alignItems={'center'} justifyContent={'center'} textAlign={'center'} w={'100%'} >
           <Heading color={'green'} size={{ base: 'lg', md: 'lg' }}>
-            Nos conheça através de nossos clientes
+            O que os clientes falam sobre nós
             <Divider />
           </Heading>
           <Text mb={4} w={'100%'}>+ 1.2 Milhões clientes satisfeitos, conheça alguns relatos de sucesso </Text>
