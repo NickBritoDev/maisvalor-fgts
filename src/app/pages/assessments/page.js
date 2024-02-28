@@ -16,7 +16,7 @@ export default function Assessments() {
       paddingBottom={{ base: 20, md: 24 }}
     >
       <Box w={'100%'}>
-        <Flex mt={{ base: -20, md: -6 }} mb={{ base: 0, md: 10 }} flexDir={'column'} mx={'auto'} alignItems={'center'} justifyContent={'center'} textAlign={'center'} w={'100%'} >
+        <Flex mt={{ base: -20, md: -10 }} mb={{ base: 0, md: 0 }} flexDir={'column'} mx={'auto'} alignItems={'center'} justifyContent={'center'} textAlign={'center'} w={'100%'} >
           <Heading color={'green'} size={{ base: 'lg', md: 'lg' }}>
             O que os clientes falam sobre nós
             <Divider />
@@ -38,31 +38,35 @@ export default function Assessments() {
             background-color: rgba(0, 0, 0, 0);
             border-radius: 6px;
           }
-        `} m={'0 auto'} overflowY={'scroll'} h={{ base: '600px', md: '350px' }} paddingInline={4} alignItems={'center'} justifyContent={'space-between'} w={{ base: '100%', md: '80%' }} gap={4} flexDir={{ base: 'column', md: 'column' }}>
-          <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
-            <CardsAssessments user={'Milton Miguel'} locale={"Blumenau/SC"} assessments={'Venho aqui agradecer pelo bom atendimento da consultora, muito educada, prestativa, o atendimento foi impecável. Deus abençoe!'} />
-          </Box>
+        `} m={'0 auto'} mt={{base:-20, md: 0}} overflowX={'scroll'} h={{ base: '600px', md: '450px' }} paddingInline={4} alignItems={{ base: 'center', md: 'center' }} justifyContent={{ base: 'initial', md: 'center' }} gap={4} w={{ base: '100%', md: '90%' }}  flexDir={{ base: 'row', md: 'column' }}>
+          <Flex gap={8}>
+            <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
+              <CardsAssessments user={'Milton Miguel'} locale={"Blumenau/SC"} assessments={'Venho aqui agradecer pelo bom atendimento da consultora, muito educada, prestativa, o atendimento foi impecável. Deus abençoe!'} />
+            </Box>
 
-          <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
-            <CardsAssessments user={'Adriana Pietrobelli'} locale={"Ponta Grossa/PR"} assessments={'Quero deixar meu relato agradecendo imensamente a consultora que me atendeu pela competência, transparência, agilidade e gentileza, qualidades as quais sempre me atende no que necessito. Muito obrigada.'} />
-          </Box>
-          <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
-            <CardsAssessments user={'Leomar Siqueira de Almeida'} locale={"Santos/SP"} assessments={'Minha sincera gratidão, excepcional esforço e dedicação. Sempre busco seus serviços, o atendimento que se equipara ao nível prime/VIP. A qualidade do trabalho é evidente desde o primeiro contato até a pós contratação. O dinheiro já está na conta.'} />
-          </Box>
+            <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
+              <CardsAssessments user={'Adriana Pietrobelli'} locale={"Ponta Grossa/PR"} assessments={'Quero deixar meu relato agradecendo imensamente a consultora que me atendeu pela competência, transparência, agilidade e gentileza, qualidades as quais sempre me atende no que necessito. Muito obrigada.'} />
+            </Box>
+            <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
+              <CardsAssessments user={'Leomar Siqueira de Almeida'} locale={"Santos/SP"} assessments={'Minha sincera gratidão, excepcional esforço e dedicação. Sempre busco seus serviços, o atendimento que se equipara ao nível prime/VIP. A qualidade do trabalho é evidente desde o primeiro contato até a pós contratação. O dinheiro já está na conta.'} />
+            </Box>
+          </Flex>
 
-          <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
-            <CardsAssessments user={'Cristiane Lima Sobreira'} locale={'São Paulo/SP'} assessments={'Passando para deixar os meus parabéns para o atendimento de vocês, quanta agilidade e compromisso, sem falar no respeito, incrível!'} />
-          </Box>
-          <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
-            <CardsAssessments user={'Jordan Esly'} locale={'Santos/SP'} assessments={'Obrigado. A empresa me ajudou muito em uma área que estava meio enrolado que era a área financeira, com a sua ajuda, reformei a minha casa e também comprei um novo veículo. E a autoestima foi lá pra cima.'} />
-          </Box>
-          <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
-            <CardsAssessments user={'Irismar de Souza'} locale={"São Paulo/SP"} assessments={'O meu atendimento foi muito bom, o consultor foi muito prestativo e educado. Obrigado.'} />
-          </Box>
+          <Flex gap={8}>
+            <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
+              <CardsAssessments user={'Cristiane Lima Sobreira'} locale={'São Paulo/SP'} assessments={'Passando para deixar os meus parabéns para o atendimento de vocês, quanta agilidade e compromisso, sem falar no respeito, incrível!'} />
+            </Box>
+            <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
+              <CardsAssessments user={'Jordan Esly'} locale={'Santos/SP'} assessments={'Obrigado. A empresa me ajudou muito em uma área que estava meio enrolado que era a área financeira, com a sua ajuda, reformei a minha casa e também comprei um novo veículo. E a autoestima foi lá pra cima.'} />
+            </Box>
+            <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
+              <CardsAssessments user={'Irismar de Souza'} locale={"São Paulo/SP"} assessments={'O meu atendimento foi muito bom, o consultor foi muito prestativo e educado. Obrigado.'} />
+            </Box>
+          </Flex>
         </Flex>
       </Box>
 
-      <Box mt={{base:10, md: 2}} textAlign={'center'}  >
+      <Box mt={{ base: 10, md: -4 }} textAlign={'center'}  >
         <Heading color={'green'} mb={{ base: 2, md: 6 }} size={{ base: 'sm', md: 'lg' }}>Bancos parceiros da Mais Valor</Heading>
         <Carousel />
       </Box>

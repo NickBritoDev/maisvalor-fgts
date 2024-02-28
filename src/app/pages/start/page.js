@@ -159,16 +159,15 @@ export default function Start() {
         </Box>
       </Box>
 
-      <Box zIndex={9} bg={'white'} mt={-10} display={'flex'} flexDir={'column'} color={'black'} alignItems={'center'} justifyContent={'center'} w={'100%'} p={1} h={'100%'}>
-        <Heading size={'lg'} textTransform={'uppercase'} m={'0 auto'}>Descubra Muito Mais </Heading>
+      <Box zIndex={9} bg={'white'} mt={-20} display={'flex'} flexDir={'column'} color={'black'} alignItems={'center'} justifyContent={'center'} w={'100%'} p={1} h={'100%'}>
         <Button
           colorScheme="whatsapp"
           display="flex"
           alignItems="center"
           justifyContent="center"
           gap={2}
-          data-section="assessments"
-          onClick={() => scrollToSection('assessments')}
+          data-section="products"
+          onClick={() => scrollToSection('products')}
           mt={6}
           textAlign="center"
           fontWeight="bold"

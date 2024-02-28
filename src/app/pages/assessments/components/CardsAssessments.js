@@ -6,8 +6,8 @@ import React from 'react'
 
 export default function CardsAssessments({ user, assessments, locale }) {
   return (
-    <Flex flexDir={'column'} align={'center'} p={2}>
-      <Flex alignItems={'center'} justifyContent={'space-between'} w={'100%'}>
+    <Flex flexDir={'column'} align={'center'} p={2} w={'100%'}>
+      <Flex alignItems={'center'} justifyContent={'space-between'} w={'350px'}>
 
         <Flex color={'orange'}>
           <FaStar />
@@ -17,9 +17,9 @@ export default function CardsAssessments({ user, assessments, locale }) {
           <FaStar />
         </Flex>
 
-        <Flex fontWeight={'bold'} textAlign={'right'} flexDir={'column'}>
+        <Flex fontWeight={'bold'} textAlign={'right'} flexDir={'column'} w={'100%'}> 
           <Text fontSize={16}>{user}</Text>
-          <Flex alignItems={'center'} justifyContent={'flex-end'}>
+          <Flex alignItems={'center'} justifyContent={'flex-end'} w={'100%'}>
             <Text fontSize={14} color={'gray.600'} mb={-0.5}>{locale}</Text>
             <RiMapPinUserFill color='green' />
           </Flex>

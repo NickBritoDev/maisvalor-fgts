@@ -18,13 +18,10 @@ export default function Details() {
       >
         <AlertDialogOverlay>
           <AlertDialogContent>
-            <AlertDialogHeader fontSize='lg' fontWeight='bold'>
-              Mais detalhes sobre: FGTS
-            </AlertDialogHeader>
 
             <AlertDialogBody>
               <Heading color={'#229544'} size={'md'} mb={10}>
-                O que é a antecipação do Saque-Aniversário FGTS?
+                 Mais detalhes sobre antecipação do Saque-Aniversário FGTS
               </Heading>
               <Text fontWeight={'semibold'} mt={2}>
                 ⦁	Uma modalidade de crédito destinada a pessoas físicas que optarem pelo Saque-Aniversário do FGTS.
@@ -33,7 +30,7 @@ export default function Details() {
                 ⦁	Você pode antecipar até 10 anos do Saque-Aniversário, sem comprometer sua renda mensal.
               </Text>
               <Text fontWeight={'semibold'} mt={2}>
-                ⦁	O mínimo é de R$ 200,00 e não há limite máximo para o saque.
+                ⦁	O mínimo é de R$ 100,00 e não há limite máximo para o saque.
               </Text>
               <Text fontWeight={'semibold'} mt={2}>
                 ⦁	Liberado para negativados com saldo no FGTS, mesmo em contas inativas.

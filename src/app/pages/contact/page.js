@@ -107,7 +107,7 @@ export default function Contact() {
             <Divider />
           </Text>
           <Flex alignItems={'center'} justifyContent={'flex-start'} gap={2}>
-            <FiPhone size={30} />
+            <SlHome size={30} />
             <Text>
               Rua Quinze de Novembro nº184,
               13° andar - Centro

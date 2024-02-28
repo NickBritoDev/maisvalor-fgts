@@ -111,7 +111,7 @@ export default function Home() {
             
                   <Button w={'50vw'} alignItems={'center'} justifyContent={'space-between'} onClick={() => scrollToSection('about')}>
                     <ListItem mr={0} data-section="about" cursor={'pointer'} >
-                      Sobre
+                      Sobre nós
                     </ListItem>
                     <FcRules />
                   </Button>
@@ -147,7 +147,7 @@ export default function Home() {
             Avaliações
           </ListItem>
           <ListItem data-section="about" cursor={'pointer'} onClick={() => scrollToSection('about')}>
-            Sobre
+            Sobre nós
           </ListItem>
           <ListItem data-section="contact" cursor={'pointer'} onClick={() => scrollToSection('contact')}>
             Fale Conosco

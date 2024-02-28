@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { ChakraProvider, Box, Button, Text, VStack, Flex, Spinner, Input, Select, useDisclosure, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody } from '@chakra-ui/react';
-import { FaRobot } from "react-icons/fa";
+import { FaRobot, FaWhatsapp } from "react-icons/fa";
 import { TbMessageCircleQuestion } from "react-icons/tb";
 import InputMask from 'react-input-mask';
 
@@ -165,7 +165,7 @@ export default function InteractionWidget() {
   return (
     <ChakraProvider>
       <Button bg={'#229544'} borderRadius={'50% 50% 50% 0'} w={'60px'} h={'60px'} pos={'fixed'} bottom={2} left={2} onClick={onOpen}>
-        <TbMessageCircleQuestion color={'white'} size={40} />
+        <FaWhatsapp color={'white'} size={40} />
         <Box borderRadius={'50%'} bottom={12} left={12} pos={'fixed'} w={'20px'} h={'20px'} bg={'red'} color={'white'}>
           1
         </Box>

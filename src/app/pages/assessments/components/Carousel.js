@@ -54,7 +54,7 @@ const Carousel = () => {
   return (
     <Flex m={'0 auto'} gap={4} alignItems={'center'} justifyContent={'center'} paddingInline={8} w={'100%'}>
       {logos.slice(currentSlide, currentSlide + imagesPerSlide).map((logo, index) => (
-        <Box height={{ base: '50px', md: '100px' }} width={{ base: '50px', md: '100px' }} key={index} style={{  zIndex: 0 }}>
+        <Box height={{ base: '50px', md: '100px' }} width={{ base: '50px', md: '70px' }} key={index} style={{  zIndex: 0 }}>
           <Image src={logo} style={{ borderRadius: '10px', boxShadow: '2px 4px 10px 4px #ccc' }} alt={`logo banco ${currentSlide + index + 1}`} />
         </Box>
       ))}
