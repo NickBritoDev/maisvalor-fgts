@@ -125,7 +125,8 @@ export default function Contact() {
       </Flex>
 
       <Flex gap={{ md: 0, base: 4 }} flexDir={{ base: 'column', md: 'column' }} h={'95%'} w={{ base: '95%', md: '70%' }} mr={{ base: '0', md: 4 }} mt={{ base: -8, md: 0 }}>
-        <Box display={{ base: 'initial', md: 'none' }} mb={2} mt={-6} color={'black'}>
+        <Box display={{ base: 'initial', md: 'none' }} mb={-4} mt={-6} color={'black'}>
+          <Heading mt={0} size={'lg'} color={'#229544'}>Fale conosco</Heading>
           <Text fontSize={18} fontWeight={'bold'}>
             Disponível das 10h às 18h, exceto final de semana e feriados.
             <Divider />
@@ -147,7 +148,7 @@ export default function Contact() {
           </Flex>
         </Box>
         <Box boxShadow={'md'} rounded={{ base: '2xl', md: 'none' }} w={{ base: '100%', md: '100%' }} bg={'white'} color={'black'} p={4}  >
-          <Heading size={'sm'}>Preencha o formulário.</Heading>
+          <Heading size={'sm'}>Preencha o formulário</Heading>
           <Text>Ao preencher os seus dados você nos ajuda a te auxiliar na melhor decisão</Text>
           <Divider mb={6} />
           <form onSubmit={handleSubmit}>
