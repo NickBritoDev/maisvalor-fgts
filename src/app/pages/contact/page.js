@@ -123,8 +123,8 @@ export default function Contact() {
         </Box>
       </Flex>
 
-      <Flex gap={{ md: 0, base: 4 }} flexDir={{ base: 'column', md: 'column' }} h={'95%'} w={{ base: '95%', md: '70%' }} mr={{ base: '0', md: 4 }} >
-        <Box boxShadow={'md'} rounded={{ base: '2xl', md: 'none' }} w={{ base: '100%', md: '100%' }} bg={'white'} color={'black'} p={4}  >
+      <Flex gap={{ md: 0, base: 4 }} flexDir={{ base: 'column', md: 'column' }} h={'95%'} w={{ base: '95%', md: '70%' }} mr={{ base: '0', md: 4 }} mt={{base: -8, md: 0}}>
+        <Box  boxShadow={'md'} rounded={{ base: '2xl', md: 'none' }} w={{ base: '100%', md: '100%' }} bg={'white'} color={'black'} p={4}  >
           <Heading size={'sm'}>Preencha o formulário.</Heading>
           <Text>Ao preencher os seus dados você nos ajuda a te auxiliar na melhor decisão</Text>
           <Divider mb={6} />
@@ -191,6 +191,27 @@ export default function Contact() {
         </Box>
 
         <Box display={{ base: 'initial', md: 'initial' }} h={{ base: '100%' }} w={{ base: '100%', md: '100%' }}>
+          <Box display={{base: 'initial', md: 'none'}} mb={2} mt={-2}  color={'black'}>
+            <Text fontSize={18} fontWeight={'bold'}>
+              Disponível das 10h às 18h, exceto final de semana e feriados.
+              <Divider />
+            </Text>
+            <Flex alignItems={'center'} justifyContent={'flex-start'} gap={2}>
+              <FcHome size={30} />
+              <Text>
+                Rua Quinze de Novembro nº184,
+                13° andar - Centro
+                São Paulo / SP
+              </Text>
+            </Flex>
+            <Flex alignItems={'center'} justifyContent={'flex-start'} gap={2}>
+              <FcPhone size={30} />
+              <Text>
+                Sede (11) 3467-0070 /
+                Sac 0800-042-0710
+              </Text>
+            </Flex>
+          </Box>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.588561940494!2d-46.6340449!3d-23.547296199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5855260fd72d%3A0xc9fe9caf4e1e6f85!2sRua%20XV%20de%20Novembro%2C%20184!5e0!3m2!1spt-BR!2sbr!4v1707310542577!5m2!1spt-BR!2sbr"
             width="100%"
