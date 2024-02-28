@@ -24,26 +24,7 @@ const perguntas = [
       'Funcionário de empresa privada (CLT)',
       'Autônomo',
       'Aposentado ou pensionista'],
-  },
-  {
-    texto: 'Qual produto você gostaria de adquirir?',
-    tipo: 'botoes',
-    opcoes: [
-      // 'Crédito Consignado',
-      // 'Cartão Beneficio',
-      'FGTS',
-      // 'Credito Imobiliário (CGI e Aquisição)',
-      // 'Crédito Pessoal',
-      // 'Consórcio',
-      // 'Energia Solar',
-      // 'Crefaz',
-    ],
-  },
-  {
-    texto: 'Você conhece o produto selecionado?',
-    tipo: 'botoes',
-    opcoes: ['Sim', 'Não'],
-  },
+  }
 ];
 
 const remetentes = {
@@ -130,12 +111,6 @@ export default function InteractionWidget() {
             case 'Qual seu telefone?':
               newData.telefone = resposta;
               break;
-            case 'Qual produto você gostaria de adquirir?':
-              newData.produto = resposta;
-              break;
-            case 'Você conhece o produto selecionado?':
-              newData.duvida = resposta === 'Sim' ? 'Eu já conheço o produto.' : 'Gostaria de saber mais sobre o produto.';
-              break;
             default:
               break;
           }
@@ -156,7 +131,7 @@ export default function InteractionWidget() {
 
   const gerarTextoWhatsapp = () => {
     const textoFormatado = `Olá, meu nome é ${dadosUsuario.nome || 'Não informado'}, sou ${dadosUsuario.profissao || 'Não informado'}.
-    Tenho interesse em sacar meu ${dadosUsuario.produto || 'Não informado'}.!`;
+    Tenho interesse em sacar meu FGTS.!`;
 
     return encodeURIComponent(textoFormatado);
   };

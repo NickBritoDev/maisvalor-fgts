@@ -93,15 +93,15 @@ export default function Contact() {
       flexDir={{ base: 'column', md: 'row' }}
       paddingTop={20}
     >
-      <Flex h={'100%'} display={{ base: 'none', md: 'initial' }} mt={40} ml={4} w={'70%'} borderRadius={20} position="relative">
-        <div style={{ position: 'relative', zIndex: 0 }}>
+      <Flex h={'100%'} display={{ base: 'none', md: 'initial' }} mt={20} ml={4} w={'70%'} borderRadius={20} position="relative">
+        <div style={{ position: 'relative', zIndex: 0, marginBottom: '20px' }}>
           <Image
             src={contact}
             alt="Contato"
           />
         </div>
-        <Box pos={'absolute'} bottom={'30%'} left={4} zIndex={3} color={'black'}>
-          <Heading mt={4} size={'lg'} color={'#229544'}>Fale conosco</Heading>
+        <Box pos={'absolute'} bottom={'25%'} left={4} zIndex={3} color={'black'}>
+          <Heading mt={20} size={'lg'} color={'#229544'}>Fale conosco</Heading>
           <Text fontSize={18} fontWeight={'bold'}>
             Disponível das 10h às 18h, exceto final de semana e feriados.
             <Divider />
@@ -197,12 +197,12 @@ export default function Contact() {
             <FormControl mb={4}>
               <FormLabel fontWeight={'bold'} mb={-2}>Selecione uma pergunta</FormLabel>
               <Select variant='flushed' placeholder="Escolha uma dúvida" name="duvida" value={formData.duvida} onChange={handleChange}>
-                <option style={{ color: 'black' }} value={'Como funciona?'}>Como funciona?</option>
-                <option style={{ color: 'black' }} value={'É seguro?'}>É seguro?</option>
-                <option style={{ color: 'black' }} value={'Tenho direito ao FGTS?'}>Tenho direito ao FGTS?</option>
-                <option style={{ color: 'black' }} value={'É possivel fazer com nome sujo?'}>É possivel fazer com nome sujo?</option>
-                <option style={{ color: 'black' }} value={'Qual o percentual de juros?'}>Qual o percentual de juros?</option>
-                <option style={{ color: 'black' }} value={'Consigo adquirir esse produto?'}>Consigo adquirir esse produto?</option>
+                <option style={{ color: 'black' }} value={'O que é a Antecipação Saque Aniversário FGTS?'}>O que é a Antecipação Saque Aniversário FGTS?</option>
+                <option style={{ color: 'black' }} value={'Quem pode contratar a Antecipação do Saque Aniversário?'}>Quem pode contratar a Antecipação do Saque Aniversário?</option>
+                <option style={{ color: 'black' }} value={'Vou passar por análise de crédito?'}>Vou passar por análise de crédito?</option>
+                <option style={{ color: 'black' }} value={'A antecipação do Saque FGTS compromete minhas linhas de crédito?'}>A antecipação do Saque FGTS compromete minhas linhas de crédito?</option>
+                <option style={{ color: 'black' }} value={'Existe valor mínimo de contratação?'}>Existe valor mínimo de contratação?</option>
+                <option style={{ color: 'black' }} value={'Em quanto tempo o valor da antecipação de saque FGTS cai na minha conta?'}>Em quanto tempo o valor da antecipação de saque FGTS cai na minha conta?</option>
               </Select>
             </FormControl>
 
