@@ -18,7 +18,7 @@ export function Banner({ img, title, sub1, sub2, func, prod }) {
     duvida: '',
     origem: 'BANNER'
   })
-  const phoneNumber = '+5511965927889';
+  const phoneNumber = '+5511913675219';
   const message = `Olá, meu nome é ${formData.nome}, sou ${formData.produto}. Tenho interesse em sacar meu ${prod}`;
 
   const sendMessage = async (e) => {

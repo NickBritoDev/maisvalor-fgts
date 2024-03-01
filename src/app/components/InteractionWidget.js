@@ -273,7 +273,7 @@ export default function InteractionWidget() {
                       setExibirBotaoEnvio(false);
                     }}
                     as="a"
-                    href={`https://api.whatsapp.com/send?phone=+5511965927889&text=${gerarTextoWhatsapp()}`}
+                    href={`https://api.whatsapp.com/send?phone=+5511913675219&text=${gerarTextoWhatsapp()}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     bg="#229544"
