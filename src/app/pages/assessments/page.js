@@ -38,7 +38,7 @@ export default function Assessments() {
             background-color: rgba(0, 0, 0, 0);
             border-radius: 6px;
           }
-        `} m={'0 auto'} mt={{base:40, md: 0}} overflowX={'scroll'} h={{ base: '250px', md: '450px' }} paddingInline={4} alignItems={{ base: 'center', md: 'center' }} justifyContent={{ base: 'initial', md: 'center' }} gap={4} w={{ base: '100%', md: '90%' }}  flexDir={{ base: 'row', md: 'column' }}>
+        `} m={'0 auto'} mt={{ base: 40, md: 0 }} overflowX={'scroll'} h={{ base: '250px', md: '350px' }} paddingInline={4} alignItems={{ base: 'center', md: 'center' }} justifyContent={{ base: 'initial', md: 'initial' }} gap={4} w={{ base: '100%', md: '90%' }} flexDir={{ base: 'row', md: 'row' }}>
           <Flex gap={8}>
             <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
               <CardsAssessments user={'Milton Miguel'} locale={"Blumenau/SC"} assessments={'Venho aqui agradecer pelo bom atendimento da consultora, muito educada, prestativa, o atendimento foi impecável. Deus abençoe!'} />
@@ -66,7 +66,7 @@ export default function Assessments() {
         </Flex>
       </Box>
 
-      <Box mt={{ base: 10, md: -4 }} textAlign={'center'}  >
+      <Box mt={{ base: 10, md: 8 }} textAlign={'center'}  >
         <Heading color={'green'} mb={{ base: 2, md: 6 }} size={{ base: 'sm', md: 'lg' }}>Bancos parceiros da Mais Valor</Heading>
         <Carousel />
       </Box>
