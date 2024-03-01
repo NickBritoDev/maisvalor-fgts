@@ -6,7 +6,7 @@ import Carousel from './components/Carousel'
 
 export default function Assessments() {
   return (
-    <Flex
+    <Flex mt={-32}
       bg={'white'}
       h={'100vh'} w={'100%'}
       overflow={'hidden'} alignItems={'center'}
@@ -15,7 +15,7 @@ export default function Assessments() {
       paddingBottom={{ base: 10, md: 14 }}
     >
       <Box w={'100%'}>
-        <Flex  mb={{ base: 0, md: 0 }} flexDir={'column'} mx={'auto'} alignItems={'center'} justifyContent={'center'} textAlign={'center'} w={'100%'} >
+        <Flex mb={{ base: 0, md: 0 }} flexDir={'column'} mx={'auto'} alignItems={'center'} justifyContent={'center'} textAlign={'center'} w={'100%'} >
           <Heading color={'green'} size={{ base: 'lg', md: 'lg' }}>
             O que os clientes falam sobre nós
             <Divider />
@@ -37,7 +37,7 @@ export default function Assessments() {
             background-color: rgba(0, 0, 0, 0);
             border-radius: 6px;
           }
-        `} m={'0 auto'} mt={{ base: 40, md: 0 }} overflowX={'scroll'} h={{ base: '250px', md: '350px' }} paddingInline={4} alignItems={{ base: 'center', md: 'center' }} justifyContent={{ base: 'initial', md: 'initial' }} gap={4} w={{ base: '100%', md: '90%' }} flexDir={{ base: 'row', md: 'row' }}>
+        `} m={'0 auto'} mt={{ base: 10, md: 0 }} overflowX={'scroll'} h={{ base: '450px', md: '350px' }} paddingInline={4} alignItems={{ base: 'center', md: 'center' }} justifyContent={{ base: 'initial', md: 'initial' }} gap={4} w={{ base: '100%', md: '90%' }} flexDir={{ base: 'column', md: 'row' }}>
           <Flex gap={8}>
             <Box w={'100%'} rounded={'2xl'} boxShadow={'md'}>
               <CardsAssessments user={'Milton Miguel'} locale={"Blumenau/SC"} assessments={'Venho aqui agradecer pelo bom atendimento da consultora, muito educada, prestativa, o atendimento foi impecável. Deus abençoe!'} />
@@ -65,8 +65,8 @@ export default function Assessments() {
         </Flex>
       </Box>
 
-      <Box mt={{ base: 10, md: 8 }} textAlign={'center'}  >
-        <Heading color={'green'} mb={{ base: 2, md: 6 }}  size={{ base: 'lg', md: 'lg' }}>Bancos parceiros da Mais Valor</Heading>
+      <Box mt={{ base: -20, md: 8 }} textAlign={'center'}  >
+        <Heading  color={'green'} mb={{ base: 2, md: 6 }} size={{ base: 'lg', md: 'lg' }}>Bancos parceiros da Mais Valor</Heading>
         <Carousel />
       </Box>
 

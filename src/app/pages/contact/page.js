@@ -125,7 +125,7 @@ export default function Contact() {
       </Flex>
 
       <Flex gap={{ md: 0, base: 4 }} flexDir={{ base: 'column', md: 'column' }} h={'95%'} w={{ base: '95%', md: '70%' }} mr={{ base: '0', md: 4 }} mt={{ base: -8, md: 0 }}>
-        <Box display={{ base: 'initial', md: 'none' }} mb={-4} mt={-6} color={'black'}>
+        <Box display={{ base: 'initial', md: 'none' }} mb={8} mt={-6} color={'black'}>
           <Heading mt={0} size={'lg'} color={'#229544'}>Fale conosco</Heading>
           <Text fontSize={18} fontWeight={'bold'}>
             Disponível das 10h às 18h, exceto final de semana e feriados.
