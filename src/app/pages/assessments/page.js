@@ -12,11 +12,10 @@ export default function Assessments() {
       overflow={'hidden'} alignItems={'center'}
       gap={4} justifyContent={'space-between'}
       flexDir={{ base: 'column', md: 'column' }}
-      paddingTop={{ base: 20, md: 24 }}
-      paddingBottom={{ base: 20, md: 24 }}
+      paddingBottom={{ base: 10, md: 14 }}
     >
       <Box w={'100%'}>
-        <Flex mt={{ base: -20, md: -10 }} mb={{ base: 0, md: 0 }} flexDir={'column'} mx={'auto'} alignItems={'center'} justifyContent={'center'} textAlign={'center'} w={'100%'} >
+        <Flex  mb={{ base: 0, md: 0 }} flexDir={'column'} mx={'auto'} alignItems={'center'} justifyContent={'center'} textAlign={'center'} w={'100%'} >
           <Heading color={'green'} size={{ base: 'lg', md: 'lg' }}>
             O que os clientes falam sobre nós
             <Divider />
@@ -67,7 +66,7 @@ export default function Assessments() {
       </Box>
 
       <Box mt={{ base: 10, md: 8 }} textAlign={'center'}  >
-        <Heading color={'green'} mb={{ base: 2, md: 6 }} size={{ base: 'sm', md: 'lg' }}>Bancos parceiros da Mais Valor</Heading>
+        <Heading color={'green'} mb={{ base: 2, md: 6 }}  size={{ base: 'lg', md: 'lg' }}>Bancos parceiros da Mais Valor</Heading>
         <Carousel />
       </Box>
 

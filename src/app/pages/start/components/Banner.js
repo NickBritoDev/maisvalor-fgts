@@ -86,7 +86,7 @@ export function Banner({ img, title, sub1, sub2, func, prod }) {
         <Text zIndex={7} fontSize={20} fontWeight={'bold'} my={4}>{sub1}</Text>
         <Text zIndex={7} fontSize={20} fontWeight={'bold'}>{sub2}</Text>
         <Flex flexDir={{ base: 'column', md: 'row' }} textTransform={'uppercase'}>
-          <Button w={{ base: '50%', md: '10%' }} zIndex={9} mt={{ md: 20 }} onClick={onOpen}>
+          <Button w={{ base: '50%', md: '10%' }} zIndex={9} mt={{base: 10, md: 20 }} onClick={onOpen}>
             Contrate já!
           </Button>
           <Details />
@@ -102,7 +102,7 @@ export function Banner({ img, title, sub1, sub2, func, prod }) {
         <AlertDialogOverlay>
           <AlertDialogContent>
             <AlertDialogHeader fontSize='lg' fontWeight='bold'>
-              Formulario de Duvidas sobre: {prod}
+              Formulário de Dúvidas sobre: {prod}
             </AlertDialogHeader>
 
             <AlertDialogBody>

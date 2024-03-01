@@ -4,8 +4,6 @@ import React, { useState, useEffect } from 'react'
 import { Banner } from './components/Banner'
 import { FaArrowDown } from 'react-icons/fa'
 import fgts from '@/images/produtos/fgts.png'
-import crefaz from '@/images/produtos/crefaz.png'
-import maisvalor from '@/images/produtos/maisvalor.png'
 import Image from 'next/image'
 
 export default function Start() {
@@ -22,34 +20,11 @@ export default function Start() {
         'linear-gradient(to right, #4b6cb7, #182848)',
       ],
     },
-    // {
-    //   prod: 'CREFAZ',
-    //   img: crefaz,
-    //   title: 'Contrate empréstimo com sua conta de luz',
-    //   sub1: 'Contrate empréstimo na Crefaz com débito na sua conta de luz. Prático e rápido.',
-    //   sub2: '',
-    //   gradient: [
-    //     '#F09819',
-    //     '-webkit-linear-gradient(to right, #F09819, #FF512F)',
-    //     'linear-gradient(to right, #F09819, #FF512F)',
-    //   ],
-    // },
-    // {
-    //   prod: 'MAIS VALOR',
-    //   img: maisvalor,
-    //   title: 'Contrate todo e qualquer tipo de empréstimo',
-    //   sub1: 'Vem com a gente nessa!',
-    //   sub2: 'Temos uma solução para cada momento da sua vida.',
-    //   gradient: [
-    //     '#52c234',
-    //     '-webkit-linear-gradient(to right, #52c234, #061700)',
-    //     'linear-gradient(to right, #52c234, #061700)',
-    //   ],
-    // },
   ];
 
   const [currentBanner, setCurrentBanner] = useState(0);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleNextBanner = () => {
     setCurrentBanner((prevBanner) => (prevBanner + 1) % details.length);
   };
@@ -58,8 +33,7 @@ export default function Start() {
     const intervalId = setInterval(handleNextBanner, 9000);
 
     return () => clearInterval(intervalId);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [handleNextBanner]);
 
 
   const scrollToSection = (sectionId) => {
@@ -120,7 +94,7 @@ export default function Start() {
         flexDir={'column'}
         w={'100%'}
         bg={details[currentBanner].gradient}
-        h={'80vh'}
+        h={'100vh'}
         position="relative"
       >
         <Banner
@@ -131,7 +105,7 @@ export default function Start() {
           sub1={details[currentBanner].sub1}
           sub2={details[currentBanner].sub2}
         />
-        <Box display={{md:'none'}}>
+        <Box display={{ md: 'none' }}>
           <Image
             width={300}
             height={400}
@@ -144,7 +118,7 @@ export default function Start() {
             }}
           />
         </Box>
-        <Box display={{base: 'none', md: 'initial'}} >
+        <Box display={{ base: 'none', md: 'initial' }} >
           <Image
             width={600}
             height={400}
@@ -159,8 +133,10 @@ export default function Start() {
         </Box>
       </Box>
 
-      <Box zIndex={9} bg={'white'} mt={-20} display={'flex'} flexDir={'column'} color={'black'} alignItems={'center'} justifyContent={'center'} w={'100%'} p={1} h={'100%'}>
+      <Box zIndex={9} bg={'white'} display={'flex'} flexDir={'column'} color={'black'} alignItems={'center'} justifyContent={'center'} w={'100%'}  >
         <Button
+          mt={-4}
+          mb={4}
           colorScheme="whatsapp"
           display="flex"
           alignItems="center"
@@ -168,7 +144,6 @@ export default function Start() {
           gap={2}
           data-section="products"
           onClick={() => scrollToSection('products')}
-          mt={6}
           textAlign="center"
           fontWeight="bold"
           _hover={{ transform: 'translateY(-2px)' }}

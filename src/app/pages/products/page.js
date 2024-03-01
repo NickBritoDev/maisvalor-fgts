@@ -35,28 +35,27 @@ export default function Products() {
       h={'100vh'} w={'100%'}
       overflow={'hidden'} alignItems={'center'}
       gap={10} justifyContent={'flex-start'}
-      flexDir={'column'} paddingTop={20} paddingInline={6}>
+      flexDir={'column'} paddingTop={0} paddingInline={6}>
 
       <Heading color={'green'} size={{ base: 'lg', md: 'lg' }}>Dúvidas frequentes</Heading>
 
+      <Accordion w={'100%'} gap={8} allowToggle>
         {script.map((item, index) => (
-          <Accordion w={'100%'} key={index} allowToggle>
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <Box fontWeight={'bold'} as="span" flex='1' textAlign='left'>
-                    {item.prg}
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>
-                {item.rsp}
-              </AccordionPanel>
-            </AccordionItem>
-
-          </Accordion>
+          <AccordionItem mb={8} key={index}>
+            <h2>
+              <AccordionButton>
+                <Box fontWeight={'bold'} as="span" flex='1' textAlign='left'>
+                  {item.prg}
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              {item.rsp}
+            </AccordionPanel>
+          </AccordionItem>
         ))}
+      </Accordion>
     </Flex>
   )
 }

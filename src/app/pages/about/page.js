@@ -15,10 +15,10 @@ export default function About() {
       flexDir={'column'}
     >
 
-      <Heading mb={-8} color={'green'} size={{ base: 'lg', md: 'lg' }}>Quem é a Mais Valor?</Heading>
+      <Heading mb={-4} color={'green'} size={{ base: 'lg', md: 'lg' }}>Quem é a Mais Valor?</Heading>
       <Box w={{ base: '90%', md: '60%' }} display={'flex'} flexDir={'column'} alignItems={'center'} textAlign={'center'} justifyContent={'center'}>
 
-        <Flex mt={10} flexDir={{ base: 'column' }} gap={4} w={'100%'} alignItems={'flex-start'} justifyContent={'flex-start'}>
+        <Flex  flexDir={{ base: 'column' }} gap={4} w={'100%'} alignItems={'flex-start'} justifyContent={'flex-start'}>
           <Box p={2} rounded={'xl'} pb={6} w={'100%'} display={'flex'} flexDir={'column'} alignItems={'center'} justifyContent={'flex-start'}>
             <Flex alignItems={'center'} justifyContent={'space-between'} gap={2}>
               <Text fontWeight={'bold'}>VISÃO</Text>
